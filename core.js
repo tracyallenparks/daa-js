@@ -495,7 +495,8 @@ function build_result(i){
         carouselItem.querySelector('.buttons-wrapper').appendChild(thisButton_last);
         carouselItem.querySelector('.buttons-wrapper').appendChild(thisButton_next);
 
-    carousel.appendChild(carouselItem);
+    //carousel.appendChild(carouselItem);
+    carousel.insertBefore(carouselItem,carousel.firstElementChild);
 }
 
 function internal_message(result){
@@ -526,7 +527,8 @@ function build_statCard(){
         carouselItem.setAttribute('tab-index',session_log['rolls'].length);
         carouselItem.setAttribute('data-entry','stats');
     carouselItem.innerHTML = '<div class="stats-wrapper"><div class="internal-header">Internal Stats</div><div class="high-view"> <div class="internal-number"><span class="label">Internals: </span><span class="result">'+session_log['rolls'].length+'</span></div> <div class="internal-number-average"><span class="label">Average Die Roll: </span><span class="result">'+session_log['average']+'</span></div> </div></div>';
-    carousel.appendChild(carouselItem);
+    //carousel.appendChild(carouselItem);
+    carousel.insertBefore(carouselItem,carousel.firstElementChild);
 }
 
 function button_edit(ele){
